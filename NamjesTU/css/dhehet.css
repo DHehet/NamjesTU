@@ -1,0 +1,509 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #333333;
+    opacity: 1;
+    background: radial-gradient(circle, transparent 20%, #333333 20%, #333333 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #333333 20%, #333333 80%, transparent 80%, transparent) 100px 100px, linear-gradient(#7FC37E 8px, transparent 8px) 0 -4px, linear-gradient(90deg, #7FC37E 8px, #333333 8px) -4px 0;
+    background-size: 200px 200px, 200px 200px, 100px 100px, 100px 100px;
+    font-family: Arial, Helvetica, sans-sarif;
+}
+
+.header {
+    position: relative;
+    background-color: white;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    width: 100%;
+    z-index: 3;
+    border-radius: 20px;
+}
+
+.menu-icon {
+    z-index: 4;
+}
+
+.menu a {
+    color: #000;
+}
+
+.header a:hover {
+    background: #333333;
+    border-radius: 20px;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.header li {
+    float: left;
+}
+
+.header li a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.header ul a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.header ul a:hover {
+    color: black;
+    background-color: #C27EC3;
+}
+
+.header .logo {
+    float: left;
+    display: block;
+    padding: 12px 20px;
+    position: relative;
+    z-index: 4;
+}
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.header .menu-icon {
+    padding: 50px 30px 50px 30px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+
+.header .menu-icon .nav-icon {
+    background: #333;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background .2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before {
+    background: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: 5px;
+}
+
+.header .menu-icon .nav-icon:after {
+    background: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: -5px;
+}
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked~.menu {
+    max-height: 75px;
+}
+
+#page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    margin-top: auto;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+footer a:hover {
+    background: none;
+}
+
+.text-container {
+    display: inline;
+}
+
+#prijavljeni-korisnik {
+    float: right;
+    text-align: right;
+    padding-top: 28px;
+}
+
+#naslov {
+    position: absolute;
+    width: 100%;
+    color: #000;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.sadrzaj {
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    margin: 10px 20px 10px 20px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.g-recaptcha {
+    display: inline-block;
+}
+
+.greska {
+    margin-top: 0;
+    text-align: left;
+    font-size: 15px;
+    color: red;
+}
+
+#recaptcha_greska {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#povratna {
+    background-color: #C27EC3;
+    float: left;
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#trenutno_vrijeme {
+    float: right;
+    margin-right: 20px;
+}
+
+#zapamti-chbox {
+    cursor: pointer;
+    float: left;
+    width: 50px;
+    margin: auto;
+    height: 25px;
+}
+
+#poravnaj {
+    overflow: hidden;
+    display: block;
+    padding: 0 4px 0 10px
+}
+
+input {
+    font-size: 20px;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px;
+    height: 35px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #7FC37E;
+}
+
+input[type=submit] {
+    cursor: pointer;
+    width: 180px;
+    padding: 0;
+    background-color: #7FC37E;
+    border: 2px solid;
+}
+
+.forma {
+    width: 600px;
+    margin: 10px auto;
+}
+
+h3 {
+    position: relative;
+}
+
+.forma label{
+    float: left;
+}
+
+#format-mob {
+    float: right;
+}
+
+#copyright {
+    margin-bottom: 0px;
+}
+
+#address {
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+#address a:hover {
+    color: black;
+    background: #7FC37E;
+}
+
+a:hover {
+    color: black;
+    background: #7FC37E;
+}
+
+td:hover, a:hover{
+    background: #C27EC3;
+}
+
+#skocni-prozor {
+    display: none;
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#sadrzaj {
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    background-color: white;
+    margin: 300px auto;
+    padding: 20px;
+    width: 25%;
+    border-radius: 20px;
+}
+
+button {
+    cursor: pointer;
+    margin-top: 25px;
+    width: 180px;
+    padding: 10px;
+    background-color: #7FC37E;
+    border: 2px solid;
+    border-radius: 20px;
+}
+
+/*#C27EC3*/
+/*#7FC37E*/
+
+table,
+th,
+td {
+    margin: auto;
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+th {
+    background-color: #C27EC3;
+    color: black;
+    border: 2px solid black;
+    min-width: 100px;
+}
+
+tr {
+    background-color: white;
+    color: black;
+}
+
+tr:hover
+{
+    background-color: #7FC37E;
+}
+
+.mobilna-tablica {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.search_sort {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.sort {
+    float: right;
+    text-align: right;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+.sortiraj_stupac {
+    font-size: 20px;
+    background-color: #7FC37E;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.trazilica {
+    float: left;
+    margin: auto 20px;
+    width: auto;
+}
+
+.form-dodaj-kat {
+    display: none;
+    padding: 20px 0px 0px 10px;
+    overflow-x: hidden;
+}
+
+.form-dodaj-kat label {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+}
+.form-dodaj-kat input, 
+.form-dodaj-kat select {
+    display: inline-block;
+    height: 25px;
+    width: 300px;
+}
+
+.form-dodaj-kat select {
+    font-size: 20px;
+    background-color: #7FC37E;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.form-dodaj-namj {
+    display: none;
+    padding: 20px 0px 0px 10px;
+    overflow-x: hidden;
+}
+
+.form-dodaj-namj label {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+}
+
+.form-dodaj-namj input, 
+.form-dodaj-namj select {
+    display: inline-block;
+    height: 25px;
+    width: 300px;
+}
+
+.form-dodaj-namj select {
+    font-size: 20px;
+    background-color: #7FC37E;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#gumb_dodaj {
+    margin-top: 10px;
+}
+
+#gumb_odustani {
+    display: none;
+}
+
+#unesi_zapis {
+    margin-right: 40px;
+    background-color: #C27EC3;
+}
+
+#azuriraj_zapis {
+    display: none;
+    margin-right: 40px;
+    background-color: #C27EC3;
+}
+
+/*responzivni dizajn*/
+
+@media only screen and (min-width: 170px) and (max-width: 735px) {
+    .header .menu-btn:checked~.menu {
+        max-height: 500px;
+    }
+
+    .header li {
+        float: none;
+    }
+
+    .header li a {
+        display: block;
+        text-align: left;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    .forma {
+        width: 100%;
+        margin: 1%;
+    }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 550px) {
+    #naslov {
+        font-size: medium;
+        padding-top: 22px;
+    }
+
+    .logo img {
+        width: 75px;
+        height: 50px;
+    }
+
+    .header .menu-icon {
+        padding: 35px 20px 35px 70px;
+    }
+}
+
+@media only screen and (min-width: 305px) and (max-width: 359px) {
+    #naslov {
+        display: none;
+    }
+
+    .logo img {
+        width: 75px;
+        height: 50px;
+    }
+
+    .header .menu-icon {
+        padding: 35px 20px 35px 70px;
+    }
+}
+
+@media only screen and (min-width: 240px) and (max-width: 304px) {
+    #naslov {
+        display: none;
+    }
+
+    .logo img {
+        width: 75px;
+        height: 50px;
+    }
+
+    .header .menu-icon {
+        padding: 35px 20px 35px 70px;
+    }
+}
